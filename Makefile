@@ -6,7 +6,7 @@
 #    By: alvasanc <alvasanc@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/06/04 10:11:47 by alvasanc          #+#    #+#              #
-#    Updated: 2024/06/07 11:36:53 by alvasanc         ###   ########.fr        #
+#    Updated: 2024/06/12 10:31:03 by alvasanc         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -29,7 +29,7 @@ BLUE      = \033[34;1m
 CYAN      = \033[37;1m
 RED		  = \033[31;1m
 
-SRC_FILES = create_array free pars main
+SRC_FILES = set_stack_up free pars main push rev_rotate rotate swap tools_stack
 
 SRC = $(addprefix $(SRC_DIR), $(addsuffix .c, $(SRC_FILES)))
 OBJ = $(addprefix $(OBJ_DIR), $(addsuffix .o, $(SRC_FILES)))
