@@ -6,7 +6,7 @@
 /*   By: alvasanc <alvasanc@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/20 11:24:35 by alvasanc          #+#    #+#             */
-/*   Updated: 2024/06/21 11:10:43 by alvasanc         ###   ########.fr       */
+/*   Updated: 2024/06/21 12:52:01 by alvasanc         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -62,12 +62,12 @@ void	sort_and_init(t_stack **stack_a, t_stack **stack_b)
 	{
 		assign_pos(*stack_a);
 		assign_pos(*stack_b);
-		assign_tarjet_pos(stack_a, stack_b);
+		assign_target_pos(stack_a, stack_b);
 		set_costs(stack_a, stack_b);
 		put_total_cost(stack_b);
 		smallest_cost(stack_a, stack_b);
 	}
 	assign_pos(*stack_a);
 	check = find_smallest(stack_a);
-	lowest_to_op(check, stack_a);
+	lowest_to_top(check, stack_a);
 }

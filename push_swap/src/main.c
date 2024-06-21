@@ -6,7 +6,7 @@
 /*   By: alvasanc <alvasanc@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/07 11:34:24 by alvasanc          #+#    #+#             */
-/*   Updated: 2024/06/20 11:14:04 by alvasanc         ###   ########.fr       */
+/*   Updated: 2024/06/21 12:36:45 by alvasanc         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,5 +15,15 @@
 int main(int argc, char **argv)
 {
 	if(argc == 2)
-		make_array(argv);
+	{
+		if (ft_strlen(argv[1]) == 0)
+			print_error();
+		if (is_spaces(*argv) == 0)
+			print_error();
+		set_stack_up(argv);
+	}
+	else if (argc == 1)
+		return (0);
+	else
+		print_error();
 }

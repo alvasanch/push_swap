@@ -6,7 +6,7 @@
 /*   By: alvasanc <alvasanc@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/20 10:34:08 by alvasanc          #+#    #+#             */
-/*   Updated: 2024/06/20 11:05:45 by alvasanc         ###   ########.fr       */
+/*   Updated: 2024/06/21 12:43:53 by alvasanc         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -39,7 +39,7 @@ void	move_rra(t_stack **stack, int *cost_a)
 	}
 }
 
-void	move_rrb(t_stack **stack, int cost_b)
+void	move_rrb(t_stack **stack, int *cost_b)
 {
 	while (*cost_b < 0)
 	{

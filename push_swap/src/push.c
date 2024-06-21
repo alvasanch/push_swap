@@ -6,7 +6,7 @@
 /*   By: alvasanc <alvasanc@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/12 09:53:51 by alvasanc          #+#    #+#             */
-/*   Updated: 2024/06/20 11:14:10 by alvasanc         ###   ########.fr       */
+/*   Updated: 2024/06/21 12:39:18 by alvasanc         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,7 @@ void	push(t_stack **src, t_stack **dest)
 {
 	t_stack		*aux;
 
-	if (*src != NULL & *dest = NULL)
+	if (*src != NULL && dest != NULL)
 	{
 		aux = (*src)->next;
 		(*src)->next = *dest;

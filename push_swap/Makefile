@@ -6,7 +6,7 @@
 #    By: alvasanc <alvasanc@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/06/04 10:11:47 by alvasanc          #+#    #+#              #
-#    Updated: 2024/06/21 11:05:45 by alvasanc         ###   ########.fr        #
+#    Updated: 2024/06/21 12:32:43 by alvasanc         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -29,8 +29,7 @@ BLUE      = \033[34;1m
 CYAN      = \033[37;1m
 RED		  = \033[31;1m
 
-SRC_FILES = set_stack_up free tools main push rev_rotate rotate swap /
- 			tools_stack cost move_costs sort tools_sort
+SRC_FILES = set_stack_up free tools main push rev_rotate rotate swap tools_stack cost move_costs sort tools_sort
 
 SRC = $(addprefix $(SRC_DIR), $(addsuffix .c, $(SRC_FILES)))
 OBJ = $(addprefix $(OBJ_DIR), $(addsuffix .o, $(SRC_FILES)))

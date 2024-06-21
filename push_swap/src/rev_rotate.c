@@ -6,7 +6,7 @@
 /*   By: alvasanc <alvasanc@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/12 09:54:00 by alvasanc          #+#    #+#             */
-/*   Updated: 2024/06/20 11:09:49 by alvasanc         ###   ########.fr       */
+/*   Updated: 2024/06/21 12:47:48 by alvasanc         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -53,7 +53,7 @@ void	rrr(t_stack **stack_a, t_stack **stack_b)
 	ft_printf("rrr\n");
 }
 
-void	mov_rrr(t_stack **stack_a, t_stack **stack_b, int *cost_a, int *cost_b)
+void	move_rrr(t_stack **stack_a, t_stack **stack_b, int *cost_a, int *cost_b)
 {
 	while (*cost_a < 0 && *cost_b < 0)
 	{

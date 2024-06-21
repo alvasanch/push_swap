@@ -6,7 +6,7 @@
 /*   By: alvasanc <alvasanc@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/20 10:04:41 by alvasanc          #+#    #+#             */
-/*   Updated: 2024/06/20 11:13:58 by alvasanc         ###   ########.fr       */
+/*   Updated: 2024/06/21 12:41:35 by alvasanc         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -69,5 +69,5 @@ void	smallest_cost(t_stack **stack_a, t_stack **stack_b)
 		}
 		aux = aux->next;
 	}
-	loop_moves(stack_a, stack_b, low_cost);
+	loop_moves(stack_a, stack_b, lowest_cost_node);
 }
