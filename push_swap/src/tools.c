@@ -6,7 +6,7 @@
 /*   By: alvasanc <alvasanc@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/20 11:24:03 by alvasanc          #+#    #+#             */
-/*   Updated: 2024/06/20 11:24:07 by alvasanc         ###   ########.fr       */
+/*   Updated: 2024/06/24 11:45:18 by alvasanc         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,7 @@
 
 void	check_limits(long number)
 {
-	if (number < -2147483647 || number > 2147483647)
+	if (number < -2147483648 || number > 2147483647)
 		print_error();
 }
 
@@ -71,10 +71,10 @@ long	ft_atol(char *str)
 		i++;
 	if (str[i] == '-' || str[i] == '+')
 	{
-		if (str[i] == '-')
-			sign += -1;
-		if (str[i + 1] > '9' && str[i + 1] < '0')
+		if (str[i + 1] > '9' || str[i + 1] < '0')
 			print_error();
+		if (str[i] == '-')
+			sign *= -1;
 		i++;
 	}
 	while (str[i] >= '0' && str[i] <= '9')

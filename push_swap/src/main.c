@@ -6,7 +6,7 @@
 /*   By: alvasanc <alvasanc@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/07 11:34:24 by alvasanc          #+#    #+#             */
-/*   Updated: 2024/06/21 12:36:45 by alvasanc         ###   ########.fr       */
+/*   Updated: 2024/06/24 11:36:38 by alvasanc         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,5 +25,8 @@ int main(int argc, char **argv)
 	else if (argc == 1)
 		return (0);
 	else
+	{
+		ft_putstr_fd("acata\n", 2);
 		print_error();
+	}
 }
