@@ -6,7 +6,7 @@
 /*   By: alvasanc <alvasanc@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/20 11:24:03 by alvasanc          #+#    #+#             */
-/*   Updated: 2024/06/24 11:45:18 by alvasanc         ###   ########.fr       */
+/*   Updated: 2024/06/25 11:30:41 by alvasanc         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,16 +19,34 @@ void	check_limits(long number)
 		print_error();
 }
 
-int	check_dup(int *numbers, int len)
+int	total_cost(int a, int b)
+{
+	int	cost;
+
+	cost = 0;
+	if (a == 0 && b == 0)
+		return (0);
+	if (a < 0)
+		cost = a * -1;
+	else
+		cost = a;
+	if (b < 0)
+		cost = cost + (b * -1);
+	else
+		cost = cost + b;
+	return (cost);
+}
+
+int	check_dup(int *numbers, int cost)
 {
 	int		i;
 	int		j;
 
 	i = 0;
-	while (i < len)
+	while (i < cost)
 	{
 		j = i + 1;
-		while (j < len)
+		while (j < cost)
 		{
 			if (numbers[i] == numbers[j])
 				return (0);
@@ -71,34 +89,16 @@ long	ft_atol(char *str)
 		i++;
 	if (str[i] == '-' || str[i] == '+')
 	{
-		if (str[i + 1] > '9' || str[i + 1] < '0')
-			print_error();
 		if (str[i] == '-')
 			sign *= -1;
+		if (str[i + 1] > '9' || str[i + 1] < '0')
+			print_error();
 		i++;
 	}
 	while (str[i] >= '0' && str[i] <= '9')
-		result = (result * 10) + (str[i++] - '\0');
+		result = (result * 10) + (str[i++] - '0');
 	if (str[i] != '\0')
 		print_error();
 	check_limits(sign * result);
 	return (sign * result);
-}
-
-int	total_cost(int a, int b)
-{
-	int	cost;
-
-	cost = 0;
-	if (a == 0 && b == 0)
-		return (0);
-	if (a < 0)
-		cost = a * 1;
-	else
-		cost = a;
-	if (b < 0)
-		cost = cost + (b * -1);
-	else
-		cost = cost + b;
-	return (cost);
 }

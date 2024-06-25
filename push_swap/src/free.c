@@ -6,7 +6,7 @@
 /*   By: alvasanc <alvasanc@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/05 11:34:27 by alvasanc          #+#    #+#             */
-/*   Updated: 2024/06/24 11:45:56 by alvasanc         ###   ########.fr       */
+/*   Updated: 2024/06/25 10:35:39 by alvasanc         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 void	free_matrix(char **matrix)
 {
-	int		i;
+	int	i;
 
 	i = 0;
 	while (matrix && matrix[i])
@@ -27,7 +27,7 @@ void	free_matrix(char **matrix)
 
 void	free_matrix_error(char **matrix)
 {
-	int		i;
+	int	i;
 
 	i = 0;
 	while (matrix && matrix[i])

@@ -6,7 +6,7 @@
 /*   By: alvasanc <alvasanc@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/04 10:22:12 by alvasanc          #+#    #+#             */
-/*   Updated: 2024/06/21 12:51:00 by alvasanc         ###   ########.fr       */
+/*   Updated: 2024/06/25 10:11:39 by alvasanc         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -41,7 +41,7 @@ void	create_stack(int *array, int len);
 void	push(t_stack **src, t_stack **dest);
 void	pa(t_stack **stack_a, t_stack **stack_b);
 void	pb(t_stack **stack_a, t_stack **stack_b);
-void	rev_rot(t_stack **stack);
+void	rev_rotate(t_stack **stack);
 void	rra(t_stack **stack_a);
 void	rrb(t_stack **stack_b);
 void	rrr(t_stack **stack_a, t_stack **stack_b);

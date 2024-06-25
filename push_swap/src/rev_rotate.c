@@ -6,13 +6,13 @@
 /*   By: alvasanc <alvasanc@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/12 09:54:00 by alvasanc          #+#    #+#             */
-/*   Updated: 2024/06/21 12:47:48 by alvasanc         ###   ########.fr       */
+/*   Updated: 2024/06/25 10:12:45 by alvasanc         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../push_swap.h"
 
-void	rev_rot(t_stack **stack)
+void	rev_rotate(t_stack **stack)
 {
 	t_stack	*last_stack;
 	t_stack	*second_last_stack;
@@ -36,20 +36,20 @@ void	rev_rot(t_stack **stack)
 
 void	rra(t_stack **stack_a)
 {
-	rev_rot(stack_a);
+	rev_rotate(stack_a);
 	ft_printf("rra\n");
 }
 
 void	rrb(t_stack **stack_b)
 {
-	rev_rot(stack_b);
+	rev_rotate(stack_b);
 	ft_printf("rrb\n");
 }
 
 void	rrr(t_stack **stack_a, t_stack **stack_b)
 {
-	rev_rot(stack_a);
-	rev_rot(stack_b);
+	rev_rotate(stack_a);
+	rev_rotate(stack_b);
 	ft_printf("rrr\n");
 }
 

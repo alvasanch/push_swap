@@ -6,13 +6,13 @@
 /*   By: alvasanc <alvasanc@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/12 10:18:57 by alvasanc          #+#    #+#             */
-/*   Updated: 2024/06/17 10:11:23 by alvasanc         ###   ########.fr       */
+/*   Updated: 2024/06/25 10:48:40 by alvasanc         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../push_swap.h"
 
-void	set_stack_up(char **argv)
+void	set_stack_up(char **str)
 {
 	char	**new_matrix;
 	int		*number;
@@ -23,10 +23,10 @@ void	set_stack_up(char **argv)
 	len = 0;
 	j = 0;
 	i = 0;
-	new_matrix = ft_split(argv[1], ' ');
+	new_matrix = ft_split(str[1], ' ');
 	while (new_matrix[len])
 		len++;
-	number = malloc(sizeof(int) * len);
+	number = (int *)malloc(sizeof(int) * len);
 	if (!number)
 		return ;
 	while (new_matrix[i])
@@ -35,42 +35,6 @@ void	set_stack_up(char **argv)
 		free_matrix_error(new_matrix);
 	create_stack(number, len);
 	free_matrix(new_matrix);
-}
-
-void	create_stack(int *array, int len)
-{
-	t_stack		*stack_a;
-	t_stack		*stack_b;
-
-	stack_b = NULL;
-	stack_a = make_stack(array, len);
-	check_stack_prop(&stack_a);
-	if (!stack_a)
-	{
-		free(array);
-		return ;
-	}
-	assign_index(stack_a);
-	send_b(&stack_a, &stack_b);
-	free_stack(&stack_a);
-	free_stack(&stack_b);
-	free(array);
-}
-
-void	check_stack_prop(t_stack **stack)
-{
-	if (is_sorted(*stack) == 1)
-	{
-		free_stack(stack);
-		return ;
-	}
-	else if (stack_size(*stack) == 2)
-		sa(stack);
-	else if (stack_size(*stack) == 1)
-	{
-		free_stack(stack);
-		return ;
-	}
 }
 
 t_stack	*make_stack(int *numbers, int len)
@@ -113,4 +77,40 @@ void	send_b(t_stack **stack_a, t_stack **stack_b)
 		pb(stack_a, stack_b);
 	sort_three(stack_a);
 	sort_and_init(stack_a, stack_b);
+}
+
+void	check_stack_prop(t_stack **stack)
+{
+	if (is_sorted(*stack) == 1)
+	{
+		free_stack(stack);
+		return ;
+	}
+	else if (stack_size(*stack) == 2)
+		sa(stack);
+	else if (stack_size(*stack) == 1)
+	{
+		free_stack(stack);
+		return ;
+	}
+}
+
+void	create_stack(int *array, int len)
+{
+	t_stack		*stack_a;
+	t_stack		*stack_b;
+
+	stack_b = NULL;
+	stack_a = make_stack(array, len);
+	check_stack_prop(&stack_a);
+	if (!stack_a)
+	{
+		free(array);
+		return ;
+	}
+	assign_index(stack_a);
+	send_b(&stack_a, &stack_b);
+	free_stack(&stack_a);
+	free_stack(&stack_b);
+	free(array);
 }

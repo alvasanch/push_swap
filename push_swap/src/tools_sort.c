@@ -6,7 +6,7 @@
 /*   By: alvasanc <alvasanc@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/20 11:25:18 by alvasanc          #+#    #+#             */
-/*   Updated: 2024/06/21 12:27:51 by alvasanc         ###   ########.fr       */
+/*   Updated: 2024/06/25 11:12:35 by alvasanc         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -79,24 +79,24 @@ void	assign_target_pos(t_stack **stack_a, t_stack **stack_b)
 {
 	t_stack	*b;
 	t_stack	*a;
-	t_stack	*closets;
+	t_stack	*closest;
 
 	b = *stack_b;
 	while (b)
 	{
 		a = *stack_a;
-		closets = NULL;
+		closest = NULL;
 		while (a)
 		{
 			if (b->data < a->data
-				&& (closets == NULL || closets->data > a->data))
-				closets = a;
+				&& (closest == NULL || closest->data > a->data))
+				closest = a;
 			a = a->next;
 		}
-		if (closets == NULL)
+		if (closest == NULL)
 			b->target_pos = find_smallest(stack_a);
 		else
-			b->target_pos = closets->pos;
+			b->target_pos = closest->pos;
 		b = b->next;
 	}
 }

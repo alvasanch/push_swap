@@ -6,7 +6,7 @@
 /*   By: alvasanc <alvasanc@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/12 09:53:51 by alvasanc          #+#    #+#             */
-/*   Updated: 2024/06/21 12:39:18 by alvasanc         ###   ########.fr       */
+/*   Updated: 2024/06/25 10:39:26 by alvasanc         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,7 @@
 
 void	push(t_stack **src, t_stack **dest)
 {
-	t_stack		*aux;
+	t_stack	*aux;
 
 	if (*src != NULL && dest != NULL)
 	{
@@ -29,7 +29,7 @@ void	push(t_stack **src, t_stack **dest)
 void	pa(t_stack **stack_a, t_stack **stack_b)
 {
 	push(stack_b, stack_a);
-	ft_printf("pb\n");
+	ft_printf("pa\n");
 }
 
 void	pb(t_stack **stack_a, t_stack **stack_b)
