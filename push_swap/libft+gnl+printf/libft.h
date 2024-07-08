@@ -6,7 +6,7 @@
 /*   By: alvasanc <alvasanc@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/18 13:57:26 by alvasanc          #+#    #+#             */
-/*   Updated: 2024/06/07 11:59:25 by alvasanc         ###   ########.fr       */
+/*   Updated: 2024/07/04 11:53:17 by alvasanc         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,7 +23,6 @@
 # include <stdlib.h>
 # include <stdarg.h>
 # include <fcntl.h>
-
 
 typedef struct s_list
 {

@@ -6,7 +6,7 @@
 /*   By: alvasanc <alvasanc@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/04 10:22:12 by alvasanc          #+#    #+#             */
-/*   Updated: 2024/06/25 10:11:39 by alvasanc         ###   ########.fr       */
+/*   Updated: 2024/07/08 09:41:05 by alvasanc         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -68,7 +68,7 @@ void	move_ra(t_stack **stack, int *cost_a);
 void	move_rb(t_stack **stack, int *cost_b);
 void	move_rra(t_stack **stack, int *cost_a);
 void	move_rrb(t_stack **stack, int *cost_b);
-void	move_rrr(t_stack **stack_a, t_stack **stack_b, int *cost_a, int *cost_b);
+void	m_rrr(t_stack **stack_a, t_stack **stack_b, int *cost_a, int *cost_b);
 void	move_rr(t_stack **stack_a, t_stack **stack_b, int *cost_a, int *cost_b);
 void	sort_three(t_stack **stack);
 void	loop_moves(t_stack **stack_a, t_stack **stack_b, t_stack *lowest_cost);
